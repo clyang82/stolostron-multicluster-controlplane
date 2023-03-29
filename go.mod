@@ -3,12 +3,15 @@ module github.com/stolostron/multicluster-controlplane
 go 1.19
 
 require (
+	github.com/go-logr/logr v1.2.3
 	github.com/onsi/ginkgo/v2 v2.5.0
 	github.com/onsi/gomega v1.24.1
 	github.com/openshift/client-go v0.0.0-20221019143426-16aed247da5c
+	github.com/openshift/hypershift v0.1.2
 	github.com/openshift/library-go v0.0.0-20221205131816-1700fb06ea43
-	github.com/spf13/cobra v1.5.0
+	github.com/spf13/cobra v1.6.1
 	github.com/stolostron/cluster-lifecycle-api v0.0.0-20230222063645-5b18b26381ff
+	github.com/stolostron/hypershift-addon-operator v0.0.0-20230323191721-29d9ba071a2f
 	github.com/stolostron/kubernetes-dependency-watches v0.1.0
 	github.com/stolostron/multicloud-operators-foundation v0.0.0-20230313144633-5efa51aee885
 	k8s.io/api v0.25.4
@@ -47,8 +50,8 @@ require (
 	github.com/BurntSushi/toml v1.2.0 // indirect
 	github.com/MakeNowJust/heredoc v1.0.0 // indirect
 	github.com/Masterminds/goutils v1.1.1 // indirect
-	github.com/Masterminds/semver/v3 v3.1.1 // indirect
-	github.com/Masterminds/sprig/v3 v3.2.2 // indirect
+	github.com/Masterminds/semver/v3 v3.2.0 // indirect
+	github.com/Masterminds/sprig/v3 v3.2.3 // indirect
 	github.com/NYTimes/gziphandler v1.1.1 // indirect
 	github.com/antlr/antlr4/runtime/Go/antlr v0.0.0-20220418222510-f25a4f6275ed // indirect
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d // indirect
@@ -67,7 +70,7 @@ require (
 	github.com/evanphx/json-patch/v5 v5.6.0 // indirect
 	github.com/exponent-io/jsonpath v0.0.0-20210407135951-1de76d718b3f // indirect
 	github.com/fatih/structs v1.1.0 // indirect
-	github.com/felixge/httpsnoop v1.0.1 // indirect
+	github.com/felixge/httpsnoop v1.0.2 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/ghodss/yaml v1.0.1-0.20190212211648-25d852aebe32 // indirect
 	github.com/go-errors/errors v1.4.2 // indirect
@@ -88,7 +91,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
-	github.com/huandu/xstrings v1.3.2 // indirect
+	github.com/huandu/xstrings v1.3.3 // indirect
 	github.com/imdario/mergo v0.3.13 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -97,7 +100,7 @@ require (
 	github.com/matttproud/golang_protobuf_extensions v1.0.2-0.20181231171920-c182affec369 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
-	github.com/mitchellh/mapstructure v1.4.1 // indirect
+	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/moby/spdystream v0.2.0 // indirect
 	github.com/moby/sys/mountinfo v0.6.0 // indirect
@@ -109,10 +112,10 @@ require (
 	github.com/mxk/go-flowrate v0.0.0-20140419014527-cca7078d478f // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/selinux v1.10.0 // indirect
-	github.com/openshift/api v0.0.0-20221116152553-4b67c2b2bb1e // indirect
+	github.com/openshift/api v0.0.0-20230119154305-a7b1b9651014
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 	github.com/pkg/profile v1.3.0 // indirect
-	github.com/prometheus/client_model v0.2.0 // indirect
+	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.37.0 // indirect
 	github.com/prometheus/procfs v0.8.0 // indirect
 	github.com/robfig/cron v1.2.0 // indirect
@@ -134,8 +137,8 @@ require (
 	go.etcd.io/etcd/raft/v3 v3.5.4 // indirect
 	go.starlark.net v0.0.0-20220714194419-4cadf0a12139 // indirect
 	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4 // indirect
-	golang.org/x/term v0.2.0 // indirect
-	golang.org/x/text v0.4.0 // indirect
+	golang.org/x/term v0.3.0 // indirect
+	golang.org/x/text v0.5.0 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.2.0 // indirect
 	gonum.org/v1/gonum v0.6.2 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
@@ -151,7 +154,7 @@ require (
 	k8s.io/kubectl v0.25.4 // indirect
 	k8s.io/kubelet v0.0.0 // indirect
 	k8s.io/mount-utils v0.25.4 // indirect
-	k8s.io/pod-security-admission v0.0.0 // indirect
+	k8s.io/pod-security-admission v0.23.5 // indirect
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.33 // indirect
 	sigs.k8s.io/json v0.0.0-20220713155537-f223a00ba0e2 // indirect
 	sigs.k8s.io/kube-storage-version-migrator v0.0.5 // indirect
@@ -165,7 +168,7 @@ require (
 	github.com/avast/retry-go/v3 v3.1.1 // indirect
 	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.57.0 // indirect
+	github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring v0.58.0 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect
 	go.etcd.io/etcd/server/v3 v3.5.4 // indirect
 	golang.org/x/oauth2 v0.0.0-20220822191816-0ebed06d0094 // indirect
@@ -179,17 +182,30 @@ require (
 
 require (
 	cloud.google.com/go/compute v1.9.0 // indirect
+	github.com/Azure/azure-sdk-for-go v63.4.0+incompatible // indirect
 	github.com/Azure/go-autorest/autorest v0.11.28 // indirect
 	github.com/Azure/go-autorest/autorest/adal v0.9.21 // indirect
+	github.com/Azure/go-autorest/autorest/to v0.4.0 // indirect
+	github.com/Azure/go-autorest/autorest/validation v0.3.1 // indirect
+	github.com/blang/semver v3.5.1+incompatible // indirect
+	github.com/docker/go-metrics v0.0.1 // indirect
+	github.com/docker/libtrust v0.0.0-20160708172513-aabc10ec26b7 // indirect
 	github.com/emicklei/go-restful v2.16.0+incompatible // indirect
 	github.com/form3tech-oss/jwt-go v3.2.5+incompatible // indirect
-	github.com/go-logr/logr v1.2.3 // indirect
+	github.com/go-logr/zapr v1.2.3 // indirect
+	github.com/gobuffalo/flect v0.2.5 // indirect
 	github.com/google/btree v1.1.2 // indirect
 	github.com/google/cel-go v0.12.5 // indirect
+	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/jonboulle/clockwork v0.3.0 // indirect
+	github.com/kubernetes-csi/external-snapshotter/client/v6 v6.0.1 // indirect
+	github.com/opencontainers/image-spec v1.0.3-0.20220303224323-02efb9a75ee1 // indirect
+	github.com/openshift/cluster-api-provider-agent/api v0.0.0-20220227135922-dd6353f609dc // indirect
+	github.com/openshift/custom-resource-status v1.1.3-0.20220503160415-f2fdb4999d87 // indirect
+	github.com/pborman/uuid v1.2.0 // indirect
 	github.com/pquerna/cachecontrol v0.1.0 // indirect
-	github.com/prometheus/client_golang v1.13.0 // indirect
+	github.com/prometheus/client_golang v1.14.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stolostron/go-template-utils/v3 v3.0.1 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20220101234140-673ab2c3ae75 // indirect
@@ -207,9 +223,9 @@ require (
 	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
 	go.uber.org/zap v1.22.0 // indirect
-	golang.org/x/crypto v0.1.0 // indirect
-	golang.org/x/net v0.2.0 // indirect
-	golang.org/x/sys v0.2.0 // indirect
+	golang.org/x/crypto v0.3.0 // indirect
+	golang.org/x/net v0.4.0 // indirect
+	golang.org/x/sys v0.3.0 // indirect
 	golang.org/x/time v0.0.0-20220722155302-e5dcc9cfc0b9 // indirect
 	golang.org/x/tools v0.2.0 // indirect
 	k8s.io/controller-manager v0.25.4 // indirect
@@ -217,7 +233,15 @@ require (
 	k8s.io/kube-openapi v0.0.0-20220803164354-a70c9af30aea // indirect
 	k8s.io/kubernetes v1.25.4 // indirect
 	k8s.io/utils v0.0.0-20221011040102-427025108f67 // indirect
+	kubevirt.io/api v0.58.0 // indirect
+	kubevirt.io/containerized-data-importer-api v1.50.0 // indirect
+	kubevirt.io/controller-lifecycle-operator-sdk/api v0.0.0-20220329064328-f3cc58c6ed90 // indirect
 	open-cluster-management.io/work v0.10.0 // indirect
+	sigs.k8s.io/cluster-api v1.2.10 // indirect
+	sigs.k8s.io/cluster-api-provider-aws/v2 v2.0.2 // indirect
+	sigs.k8s.io/cluster-api-provider-azure v1.6.3 // indirect
+	sigs.k8s.io/cluster-api-provider-ibmcloud v0.2.4 // indirect
+	sigs.k8s.io/cluster-api-provider-kubevirt v0.0.0-00010101000000-000000000000 // indirect
 )
 
 replace (
@@ -260,3 +284,5 @@ replace (
 )
 
 replace gopkg.in/square/go-jose.v2 => gopkg.in/square/go-jose.v2 v2.2.2
+
+replace sigs.k8s.io/cluster-api-provider-kubevirt => github.com/openshift/cluster-api-provider-kubevirt v0.0.0-20211223062810-ef64d5ff1cde
