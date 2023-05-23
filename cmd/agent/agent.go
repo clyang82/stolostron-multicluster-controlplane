@@ -85,14 +85,14 @@ func NewAgent() *cobra.Command {
 		&agentOptions.EvaluationConcurrency,
 		"evaluation-concurrency",
 		// Set a low default to not add too much load to the Kubernetes API server in resource constrained deployments.
-		2,
+		1,
 		"The max number of concurrent configuration policy evaluations",
 	)
 
 	flags.BoolVar(
 		&agentOptions.EnableMetrics,
 		"enable-metrics",
-		true,
+		false,
 		"Disable custom metrics collection",
 	)
 
